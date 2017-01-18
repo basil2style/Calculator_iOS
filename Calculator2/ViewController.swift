@@ -15,6 +15,17 @@ class ViewController: UIViewController {
     
     @IBAction func labelAction(_ sender: UIButton) {
         
+        let digit = sender.currentTitle!
+        print("Touch \(digit)")
+        if IsFirstTime {
+            let textDisplay = labelview.text!
+            labelview.text = textDisplay + digit
+            
+        }
+        else {
+            labelview.text = digit
+            
+        }
     }
     
     @IBAction func clearScreen(_ sender: UIButton) {
